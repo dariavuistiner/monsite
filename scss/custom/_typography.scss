@@ -1,0 +1,14 @@
+header{
+    h1{
+        color: $blue;
+        background-image: url("../img/");
+        transition: all 3s ease-in-out;
+        
+        &:hover{
+            color: #fff;
+        }
+        &.popcorn{
+            text-decoration-style: dashed;
+        }
+    }
+}
