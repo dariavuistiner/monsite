@@ -11,4 +11,7 @@ $(document).ready(function() {
    $(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
       $('html').removeClass('modal-open');
    });
+   $(window).load(function() {
+      $("#myPreload").fadeOut(800);
+   });
 });
