@@ -35,18 +35,23 @@ figure {
 		max-width: none;
 		height: 100%;
 		width: 100%;
-		opacity: 1;
+		opacity: 0.9;
 		@include css-transition($long-transition);
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
+		-webkit-filter: brightness(0.9);
+	  -moz-filter: brightness(0.9);
+	  -o-filter: brightness(0.9);
+	  -ms-filter: brightness(0.9);
+	  filter: brightness(0.9);
 	}
 }
 figure.portfolioThumb:hover img {
-	opacity: 0.9;
+	opacity: 1;
 	z-index: 0;
-	-webkit-filter: brightness(1.1);
-  -moz-filter: brightness(1.1);
-  -o-filter: brightness(1.1);
-  -ms-filter: brightness(1.1);
-  filter: brightness(1.1);
+	-webkit-filter: brightness(1.05);
+  -moz-filter: brightness(1.05);
+  -o-filter: brightness(1.05);
+  -ms-filter: brightness(1.05);
+  filter: brightness(1.05);
 }
