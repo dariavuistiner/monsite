@@ -1,0 +1,52 @@
+figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 0 !important;
+	min-width: 290px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	cursor: pointer;
+	padding-bottom: 15px;
+	-webkit-margin-before: 0em !important;
+	-webkit-margin-after: 0em !important;
+	-webkit-margin-start: 0px !important;
+	-webkit-margin-end: 0px !important;
+	-moz-margin-before: 0em !important;
+	-moz-margin-after: 0em !important;
+	-moz-margin-start: 0px !important;
+	-moz-margin-end: 0px !important;
+	-o-margin-before: 0em !important;
+	-o-margin-after: 0em !important;
+	-o-margin-start: 0px !important;
+	-o-margin-end: 0px !important;
+	margin-before: 0em !important;
+	margin-after: 0em !important;
+	margin-start: 0px !important;
+	margin-end: 0px !important;
+	img {
+		position: relative;
+		display: block;
+		height: 100%;
+		max-width: 100%;
+	}
+	&.portfolioThumb img {
+		max-width: none;
+		height: 100%;
+		width: 100%;
+		opacity: 1;
+		@include css-transition($long-transition);
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+}
+figure.portfolioThumb:hover img {
+	opacity: 0.9;
+	z-index: 0;
+	-webkit-filter: brightness(1.1);
+  -moz-filter: brightness(1.1);
+  -o-filter: brightness(1.1);
+  -ms-filter: brightness(1.1);
+  filter: brightness(1.1);
+}

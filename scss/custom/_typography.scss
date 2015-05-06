@@ -1,14 +1,35 @@
-header{
-    h1{
-        color: $blue;
-        background-image: url("../img/");
-        transition: all 3s ease-in-out;
-        
-        &:hover{
-            color: #fff;
-        }
-        &.popcorn{
-            text-decoration-style: dashed;
-        }
-    }
+.uppercase{
+   text-transform: uppercase;
+}
+p{
+   color: $oil;
+}
+
+a{
+   color: $oil;
+   font-weight: 700;
+   &:hover, &:focus, &:active{
+      color: $oil;
+   }
+}
+i{
+   font-style: italic;
+}
+
+h1{
+   font-weight: bold;
+   padding-left: 15px;
+}
+h2{
+   margin-bottom: -5px;
+}
+@media #{$medium-up}{
+   h1{
+      font-size:rem-calc(36);
+   }
+}
+@media #{$large-up}{
+   h1{
+      font-size:rem-calc(54);
+   }
 }
