@@ -8,27 +8,3 @@ $long-transition:     600ms;
    -o-transition: all $time ease-out;
    transition: all $time ease-out;
 }
-
-@media #{$large-up}{
-   .cmn-t-underline {
-     position: relative;
-     color: $charcoal;
-   }
-   .cmn-t-underline:after {
-     display: block;
-     position: absolute;
-     left: 0;
-     bottom: 0px;
-     width: 0;
-     height: 2px;
-     background-color: $charcoal;
-     content: "";
-     transition: width 0.4s ease-in-out;
-   }
-   .cmn-t-underline:hover {
-     color: $oil;
-   }
-   .cmn-t-underline:hover:after {
-     width: 100%;
-   }
-}

@@ -2,14 +2,15 @@ html.modal-open {
    overflow: hidden;
 }
 .reveal-modal-bg {
-	background: transparent;
-   background-image: url("../img/modalBgL.png");
 }
 .reveal-modal{
    z-index: 99999;
    position: fixed;
    top: 0 !important;
    left: 0 !important;
+   height: 100%;
+   width: 100%;
+   opacity: 1;
 	box-shadow: none;
    border: none;
    border-radius: 0px;
@@ -17,49 +18,22 @@ html.modal-open {
    -moz-border-radius: 0px;
    -o-border-radius: 0px;
    -ms-border-radius: 0px;
-   height: 100%;
-   width: 100%;
-   background: 50% 50% no-repeat;
-   opacity: 1;
-   background-size: cover;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
+   background-color:rgba(255,255,255,0.8);
    .scrollable-content{
 		overflow-y: scroll;
 		height: 100%;
-		padding: 60px 0;
-      .badges img{
-         opacity: 0.9;
-         padding: 15px;
-         width: 200px;
-         height: auto;
-      }
 	}
-
 	a.close-reveal-modal {
-      color: $white;
-      text-shadow: -1px 1px 0px $oil, -2px 2px 0px $oil, -3px 3px 0px $oil, -4px 4px 0px $vapor;
+      color: $oil;
 		top: 1.3rem;
 		right: 1.7rem;
 		font-size: 3rem;
-      transition: all 300ms ease-in-out;
-		-webkit-transition: all 300ms ease-in-out;
-		-moz-transition: all 300ms ease-in-out;
-		-o-transition: all 300ms ease-in-out;
-		-ms-transition: all 300ms ease-in-out;
+      @include css-transition($normal-transition);
       &:hover{
-			text-shadow: -1px 1px 0px $oil, -2px 2px 0px $oil, -3px 3px 0px $oil, -4px 4px 0px $oil, -5px 5px 0px $oil, -6px 6px 0px $oil, -7px 7px 0px $oil, -8px 8px 0px $oil, -9px 9px 0px $vapor, -10px 10px 0px $vapor;
+			text-shadow: -1px 1px 0px $gainsboro, -2px 2px 0px $gainsboro, -3px 3px 0px $gainsboro, -4px 4px 0px $gainsboro;
 		}
 	}
 	p{
-		margin-top: 15px;
+      padding: 30px 0;
 	}
-}
-
-
-@media #{$portrait}{
-   .reveal-modal.full.open{
-      background-image: url("../img/modalBgP.png");
-   }
 }
