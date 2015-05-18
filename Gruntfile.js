@@ -10,6 +10,7 @@ module.exports = function(grunt) {
         options: {
           outputStyle: 'compressed',
           sourceMap: true,
+          debugInfo: true
         },
         files: {
           'css/app.css': 'scss/app.scss'

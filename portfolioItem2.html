@@ -1,0 +1,82 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Daria!!!</title>
+   <link rel="stylesheet" href="css/app.css" />
+   <script src="bower_components/modernizr/modernizr.js"></script>
+</head>
+<body>
+   <div id="myPreload"></div>
+   <nav role="navigation">
+      <div class="row">
+         <div class="small-12 large-6 columns nav">
+            <a href="javascript:history.back()" class="cmn-t-underline-rl">BACK</a>
+         </div>
+      </div>
+   </nav>
+   <section id="portfolioItem">
+      <div class="row fullWith">
+         <div class="small-12 columns">
+            <img src="img/portfolioItem2/blackcurrant1.png">
+            <img src="img/portfolioItem2/blackcurrant2.png">
+            <img src="img/portfolioItem2/blackcurrant3.png">
+            <img src="img/portfolioItem2/blackcurrant4.png">
+            <img src="img/portfolioItem2/blackcurrant5.png">
+            <img src="img/portfolioItem2/blackcurrant6.png">
+            <img src="img/portfolioItem2/blackcurrant7.png">
+            <img src="img/portfolioItem2/blackcurrant8.png">
+            <img src="img/portfolioItem2/blackcurrant9.png">
+         </div>
+      </div>
+   </section>
+   <footer>
+      <div class="row fullWidth">
+         <div class="small-6 columns text-left itemLinks">
+            <a href="#" id="prev" class="cmn-t-underline-rl">PREVIOUS</a>
+         </div>
+         <div class="small-6 columns text-right itemLinks">
+            <a href="#" id="next" class="cmn-t-underline-lr">NEXT</a>
+         </div>
+      </div>
+   </footer>
+   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+   <script src="bower_components/foundation/js/foundation.min.js"></script>
+   <script src="js/app.js"></script>
+   <script>
+
+   var selector = ".nav a";
+   $(selector).click(function(){
+      $(selector).removeClass('active');
+      $(this).addClass('active');
+   });
+
+   var $root = $('html, body');
+   $('a').click(function() {
+      var href = $.attr(this, 'href');
+      $root.animate({
+         scrollTop: $(href).offset().top
+      }, 1000, function () {
+         window.location.hash = href;
+      });
+      return false;
+   });
+
+   (function($) {
+      if ( $(window).width() > 1024) {
+         $("header h1").next().height($("header h1").height());
+         $(window).scroll(function() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > 600) {
+               $('header h1').css('opacity',0);
+            }
+            else {
+               $('header h1').css('opacity',1-scrollTop/600);
+            }
+         }).scroll();
+      }
+   }(jQuery));
+   </script>
+</body>
+</html>
