@@ -43,23 +43,27 @@ body {
   }
 
   header {
-   padding: 180px 0 90px 0;
+    margin-top: 45px;
+    padding: 90px 0;
 
-   &#home {
-     background: 50% 100% no-repeat;
-     background-image: url("../img/header.png");
-     opacity: 1;
-     background-size: cover;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     -o-background-size: cover;
-     outline: 15px solid $white;
-     outline-offset: -15px;
+    &#home {
+      background: 50% 100% no-repeat;
+      background-image: url("../img/header.png");
+      opacity: 1;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      outline: 15px solid $white;
+      outline-offset: -15px;
+      display: flex;
+      align-items: center;
+      min-height: 400px;
 
-     h1 {
-       color: $white;
-       padding: 0 15px;
-       }
+      h1 {
+        color: $white;
+        padding: 0 15px;
+      }
     }
   }
 
@@ -146,7 +150,12 @@ body {
     }
 
     header {
-      padding: 130px 0;
+      margin-top: 0;
+      padding: 0;
+
+      &#home {
+        min-height: 100vh;
+      }
     }
 
     section {
@@ -273,7 +282,7 @@ body {
         outline-offset: -30px;
 
         h1 {
-          padding:45px;
+          padding: 0 45px;
         }
       }
     }
@@ -330,7 +339,7 @@ body {
     header {
       &#home {
         h1 {
-          padding: 180px 45px;
+          padding: 0 45px;
         }
       }
     }
@@ -342,7 +351,7 @@ body {
     header {
       &#home {
         h1 {
-          padding: 315px 45px;
+          padding: 0 45px;
         }
       }
     }
