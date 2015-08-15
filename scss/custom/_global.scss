@@ -186,6 +186,12 @@ body {
       display: block;
       margin-bottom: 20px;
     }
+
+    .portrait {
+      background: url('../img/daria.png');
+      background-size: cover;
+      height: 300px;
+    }
   }
 }
 
@@ -254,6 +260,15 @@ body {
       span {
         border-bottom: solid 6px #555;
         width: 120px;
+      }
+
+      .portrait {
+        height: 350px;
+      }
+
+      #cvCol p {
+        width: 50%;
+        float: left;
       }
     }
   }
@@ -386,6 +401,15 @@ body {
       #cvCol {
         padding-top: 0;
         margin-top: -7px
+      }
+
+      .portrait {
+        height: 450px;
+      }
+
+      #cvCol p {
+        width: 100%;
+        float: none;
       }
     }
   }
