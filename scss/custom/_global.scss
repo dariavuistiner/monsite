@@ -16,6 +16,10 @@
 body {
   background: $white;
 
+  h2, p {
+    color: #555;
+  }
+
   nav {
     width: 100%;
     height: 45px;
@@ -39,6 +43,19 @@ body {
       &:first-child {
         padding-left: 15px;
       }
+    }
+
+    .pagination {
+      padding-right: 30px;
+
+      .arrow:first-child {
+        margin-right: 20px;
+      }
+    }
+
+    .arrow {
+      margin: 10px 0 0 0;
+      padding-left: 0;
     }
   }
 
@@ -169,23 +186,6 @@ body {
       display: block;
       margin-bottom: 20px;
     }
-
-    &#footerNav {
-      padding: 0 0 15px 0;
-
-      .itemLinks a {
-        font-size: 30px;
-        @include css-transition($normal-transition);
-
-        &#prev {
-          margin-left: 15px;
-        }
-
-        &#next {
-          margin-right: 15px;
-        }
-      }
-    }
   }
 }
 
@@ -196,6 +196,15 @@ body {
 
       a {
         margin-top: 18px;
+      }
+
+      .pagination {
+        padding-right: 30px;
+      }
+
+      .arrow {
+        margin: 18px 0 0 0;
+        padding-left: 0;
       }
     }
 
@@ -238,8 +247,12 @@ body {
         padding-top: 30px;
       }
 
+      .cvPosition {
+        font-family: $header-font-family;
+      }
+
       span {
-        border-bottom: solid 6px #333;
+        border-bottom: solid 6px #555;
         width: 120px;
       }
     }
@@ -321,6 +334,14 @@ body {
           padding: 0 5px 0 2px;
         }
       }
+
+      .pagination {
+        padding-right: 60px;
+      }
+
+      .arrow {
+        margin: 32px 0 0 0;
+      }
     }
 
     header {
@@ -365,20 +386,6 @@ body {
       #cvCol {
         padding-top: 0;
         margin-top: -7px
-      }
-
-      &#footerNav {
-        padding: 0 0 15px 0;
-
-        .itemLinks a {
-          &#prev{
-            margin-left: 30px;
-          }
-
-          &#next {
-            margin-right: 30px;
-          }
-        }
       }
     }
   }
