@@ -6,8 +6,8 @@
             <a href="/" class="backlink cmn-t-underline-rl">back</a>
         </div>
         <div class="small-6 columns text-right pagination">
-            <?php previous_post_link('%link', '&#8592;', true) ?>
-            <?php next_post_link('%link', '&#8594;', true) ?>
+            <?php next_post_link('%link', '&#8592;', true) ?>
+            <?php previous_post_link('%link', '&#8594;', true) ?>
         </div>
     </div>
 </nav>
