@@ -8,7 +8,7 @@
         </div>
     </div>
 </nav>
-<header id="home" class="slide">
+<header id="home" class="slide" style="background-image: url('<?php echo the_field('intro_image') ?>')">
     <div class="row fullWith">
         <div class="small-12 columns">
             <?php the_field('intro_text') ?>
@@ -20,7 +20,7 @@
         <?php $work = new wp_query('category_name=work&posts_per_page=6') ?>
         <?php while ($work->have_posts()) : $work->the_post() ?>
             <div class="small-6 medium-4 columns portfolioThumb">
-                <a href="<?php the_permalink() ?>" style="background-image: url('img/portfolioThumb1.png')">
+                <a href="<?php the_permalink() ?>" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)) ?>')">
                     <div class="portfolioInfo">
                         <h3><?php the_title() ?></h3>
                         <p><?php the_field('skills') ?></p>
@@ -33,7 +33,7 @@
 <footer id="contact">
     <div class="row fullWidth">
         <div class="small-12 medium-6 large-4 columns">
-            <div class="portrait"></div>
+        <div class="portrait" style="background-image: url('<?php the_field('portrait_image') ?>')"></div>
         </div>
         <div id="descCol" class="small-12 medium-6 large-4 columns">
         <h2 class="uppercase"><?php the_field('bio_heading') ?></h2>

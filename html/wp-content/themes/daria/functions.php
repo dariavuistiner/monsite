@@ -1,5 +1,7 @@
 <?php
 
+add_theme_support('post-thumbnails');
+
 add_filter('next_post_link', 'posts_link_attributes');
 add_filter('previous_post_link', 'posts_link_attributes');
 
