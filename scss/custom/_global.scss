@@ -105,16 +105,6 @@ body {
         right: 0;
         @include css-transition($short-transition);
       }
-
-      &:hover {
-        &:before {
-          background: rgba(41, 41, 41, 0.6);
-        }
-
-        .portfolioInfo {
-          opacity: 1;
-        }
-      }
     }
 
     .portfolioInfo {
@@ -191,6 +181,20 @@ body {
       background: url('../img/daria.png');
       background-size: cover;
       height: 300px;
+    }
+  }
+}
+
+html.no-touch .portfolioThumb {
+  a {
+    &:hover {
+      &:before {
+        background: rgba(41, 41, 41, 0.6);
+      }
+
+      .portfolioInfo {
+        opacity: 1;
+      }
     }
   }
 }
