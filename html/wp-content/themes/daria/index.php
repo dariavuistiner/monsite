@@ -17,7 +17,7 @@
 </header>
 <section id="work" class="slide">
     <div class="row fullWidth">
-        <?php $work = new wp_query('category_name=work&posts_per_page=6') ?>
+        <?php $work = new wp_query('category_name=work') ?>
         <?php while ($work->have_posts()) : $work->the_post() ?>
             <div class="small-6 medium-4 columns portfolioThumb">
                 <a href="<?php the_permalink() ?>" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)) ?>')">
