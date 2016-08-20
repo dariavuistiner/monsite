@@ -11,14 +11,6 @@
         </div>
     </div>
 </nav>
-<section id="portfolioTitle">
-    <div class="row collapse">
-      <div class="small-8 small-offset-4 large-7 large-offset-5 columns">
-         <h2 class="uppercase"><?php the_field('stylised_title') ?></h2>
-         <p class="tags"><?php the_field('skills') ?></p>
-      </div>
-   </div>
-</section>
 <section id="portfolioItem">
     <div class="row fullWidth">
         <div class="small-12 columns">
